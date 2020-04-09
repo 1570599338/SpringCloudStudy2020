@@ -35,6 +35,7 @@ public class AppUserConfig{
 
         // 轮询
         //return new RoundRobinRule();
+        // 随机
         return  new RandomRule();
     }
 }
