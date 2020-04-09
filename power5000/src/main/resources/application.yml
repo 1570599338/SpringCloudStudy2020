@@ -5,7 +5,7 @@ eureka:
     serviceUrl:
         defaultZone: http://localhost:3000/eureka
   instance:
-    instance-id: power-0 #此实例注册到eureka服务端的唯一的实例ID
+    instance-id: power-5000 #此实例注册到eureka服务端的唯一的实例ID
 
     #instance-id: ${spring.cloud.client.ip-address}/LQuan
     prefer-ip-address: true #是否显示IP地址

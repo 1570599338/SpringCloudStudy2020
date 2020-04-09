@@ -1,4 +1,4 @@
-package lquan.config;
+package com.lquan.config;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;

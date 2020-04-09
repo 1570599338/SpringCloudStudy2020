@@ -1,7 +1,7 @@
-package lquan.controller;
+package com.lquan.controller;
 
 
-import lquan.feign.PowerServiceClient;
+import com.lquan.feign.PowerServiceClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

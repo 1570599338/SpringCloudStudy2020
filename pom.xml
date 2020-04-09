@@ -15,6 +15,16 @@
         <version>2.0.3.RELEASE</version>
     </parent>
 
+    <!--引用测试包-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+    </dependencies>
+
+
+
 
     <modules>
         <module>eureka3000</module>
@@ -23,6 +33,10 @@
         <module>power5001</module>
         <module>user4001Ribbon</module>
         <module>user4002RibbonFeign</module>
+        <module>user4003HystrixFeign</module>
+        <module>zuul6003</module>
+        <module>zuul6001</module>
+        <module>zuul6002</module>
     </modules>
 
 
