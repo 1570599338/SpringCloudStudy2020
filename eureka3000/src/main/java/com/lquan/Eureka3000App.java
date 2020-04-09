@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * ClassName com.lquan.Eureka3001App
  *
  * @Author lquan
- * @Description //TODO
+ * @Description //注册中心
  * @Date
  * @Param
  * @return
