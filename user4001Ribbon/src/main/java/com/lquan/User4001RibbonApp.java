@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * ClassName User4000App
  *
  * @Author lquan
- * @Description //TODO
+ * @Description 服务端的ribbon的负载均衡
  * @Date
  * @Param
  * @return
