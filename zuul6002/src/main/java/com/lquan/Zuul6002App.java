@@ -16,15 +16,13 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 @SpringBootApplication
 @EnableZuulProxy
-public class Zuul6000App{
+public class Zuul6002App{
 
 
     public static void main(String[] args) {
-        SpringApplication.run(Zuul6000App.class);
+
+        SpringApplication.run(Zuul6002App.class);
     }
 
 
 }
-
-
-
