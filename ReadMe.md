@@ -23,3 +23,4 @@ Chrome，Firfox以下端口的web站点无法访问，所以在配置自己站�
 #Zuul
 
 ### zuul.ignoredPath这个配置是屏蔽对应的url或路径
+
