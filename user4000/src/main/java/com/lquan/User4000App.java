@@ -28,6 +28,5 @@ public class User4000App{
     public static void main(String[] args) {
 
         SpringApplication.run(User4000App.class);
-
     }
 }

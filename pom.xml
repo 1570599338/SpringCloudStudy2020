@@ -37,6 +37,7 @@
         <module>zuul6003</module>
         <module>zuul6001</module>
         <module>zuul6002</module>
+        <!--<module>springStudy</module>-->
     </modules>
 
 
