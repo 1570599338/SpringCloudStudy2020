@@ -37,6 +37,8 @@
         <module>zuul6003</module>
         <module>zuul6001</module>
         <module>zuul6002</module>
+        <module>springbootRibbitmqServer</module>
+        <module>springbootRibbitmqClient</module>
         <!--<module>springStudy</module>-->
     </modules>
 
