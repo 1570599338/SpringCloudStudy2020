@@ -37,3 +37,93 @@ rabbitmq的多个消费这消费一个队列采用轮询策略。
 注意：rabbitmq的预取功能：
       rabbitmq的死信队列
       rabbitmq的延时队列(主要是是在死信队列的基础上完成的)
+      
+      
+##rabbit的docker配置
+
+      
+1、单机版
+
+docker run -it --name rabbitmq377 -p 5672:5672 -p 15672:15672  -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -d rabbitmq:3.7.7-management
+
+注意:需要要使用带有management版本的rabbitmq
+
+
+
+
+2、集群
+rabbitmq的master
+docker run -d --hostname  hostrabbitmqmaster  --name rabbitmqmaster  -p 5673:5672 -p 15673:15672  -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin    -e RABBITMQ_ERLANG_COOKIE='rabbitcookie'  rabbitmq:3.7.7-management
+
+
+
+rabbitmq的slave1
+docker run -d --hostname  hostrabbitmqslave1  --name rabbitslave1  -p 5674:5672 -p 15674:15672  --link rabbitmqmaster:hostrabbitmqmaster  -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin    -e RABBITMQ_ERLANG_COOKIE='rabbitcookie'  rabbitmq:3.7.7-management
+
+rabbitmq的slave2
+ docker run -d --hostname  hostrabbitmqslave2  --name rabbitslave2  -p 5675:5672 -p 15675:15672  --link rabbitmqmaster:hostrabbitmqmaster --link rabbitslave1:hostrabbitmqslave1  -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin    -e RABBITMQ_ERLANG_COOKIE='rabbitcookie'  rabbitmq:3.7.7-management
+
+
+加入RabbitMQ节点到集群
+
+master节点
+docker exec -it 11721316e137 sh
+# rabbitmqctl stop_app
+# rabbitmqctl reset
+# rabbitmqctl start_app
+# exit
+
+
+
+
+
+slave1节点
+
+# docker exec -it cde6070a1a59  sh
+# rabbitmqctl stop_app
+# rabbitmqctl reset
+# rabbitmqctl join_cluster --ram rabbit@hostrabbitmqmaster
+# rabbitmqctl start_app
+# exit
+
+
+
+slave2节点
+# docker exec -it 75ea3813811a  sh
+# rabbitmqctl stop_app
+# rabbitmqctl reset
+# rabbitmqctl join_cluster --ram rabbit@hostrabbitmqmaster
+# rabbitmqctl start_app
+# exit
+
+
+## Eureka源码
+
+1、服务注册 源码
+2、服务下架 源码
+3、心跳链接 源码
+4、集群原理 源码
+5、自我保护机制 源码
+
+eureka的1、2、3可以看作是eureka的增删改
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
