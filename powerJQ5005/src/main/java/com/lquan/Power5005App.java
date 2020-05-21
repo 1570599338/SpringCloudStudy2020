@@ -2,25 +2,26 @@ package com.lquan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
- * ClassName com.lquan.Eureka3001App
+ * ClassName User4000App
  *
  * @Author lquan
- * @Description //注册中心
+ * @Description //模拟的其他的微服务端
  * @Date
  * @Param
  * @return
  **/
 
+
 @SpringBootApplication
-@EnableEurekaServer
-public class Eureka3000App {
+@EnableEurekaClient
+public class Power5005App{
 
     public static void main(String[] args) {
 
-        SpringApplication.run(Eureka3000App.class);
+        SpringApplication.run(Power5005App.class);
 
     }
 }

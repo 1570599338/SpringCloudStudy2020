@@ -40,6 +40,11 @@
         <module>springbootRibbitmqServer</module>
         <module>springbootRibbitmqSend</module>
         <module>SpringBootBaseTest</module>
+        <module>eureka3001</module>
+        <module>eureka3002</module>
+        <module>eureka3003</module>
+        <module>powerJQ5005</module>
+        <module>userJQ4005</module>
         <!--<module>springStudy</module>-->
     </modules>
 
